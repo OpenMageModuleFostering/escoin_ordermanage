@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Escoin_Ordermanage extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category   	Escoin
+ * @package		Escoin_Ordermanage
+ * @copyright  	Copyright (c) 2014
+ * @license		http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+	<modules>
+		<Escoin_Ordermanage>
+			<version>0.1.0</version>
+		</Escoin_Ordermanage>
+	</modules>
+	<global>
+		<blocks>
+			<ordermanage>
+				<class>Escoin_Ordermanage_Block</class>
+			</ordermanage>
+			<sales>
+                <rewrite>
+                    <order_history>Escoin_Ordermanage_Block_Order_History</order_history>
+                </rewrite>
+            </sales>
+		</blocks>
+		<helpers>
+			<ordermanage>
+				<class>Escoin_Ordermanage_Helper</class>
+			</ordermanage>
+		</helpers>
+		<models>
+			<ordermanage>
+				<class>Escoin_Ordermanage_Model</class>
+			</ordermanage>
+			
+		</models>
+		<rewrite>
+            <escoin_ordermanage>
+				<!-- be sure to have only # at the end or the source -->
+				<from><![CDATA[#^/sales/order/cancel/(.*)#]]></from>
+				<to><![CDATA[/ordermanage/order/cancel/$1]]></to>
+            </escoin_ordermanage>
+        </rewrite>
+	</global>
+	<frontend>
+		<routers>
+            <escoin_ordermanage>
+                <use>standard</use>
+                <args>
+                    <module>Escoin_Ordermanage</module>
+                    <frontName>ordermanage</frontName>
+                </args>
+            </escoin_ordermanage>
+        </routers>
+		<layout>
+		    <updates>
+		        <escoin_ordermanage>
+		            <file>escoin_ordermanage.xml</file>
+		        </escoin_ordermanage>
+		    </updates>
+		</layout>
+	</frontend>
+	<adminhtml>
+		<layout>
+			<updates>
+				<escoin_ordermanage>
+					<file>escoin_ordermanage.xml</file>
+				</escoin_ordermanage>
+			</updates>
+		</layout>
+		<translate>
+			<modules>
+				<Escoin_Ordermanage>
+					<files>
+						<default>Escoin_Ordermanage.csv</default>
+					</files>
+				</Escoin_Ordermanage>
+			</modules>
+		</translate>
+		<events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <escoin_ordermanage>
+                        <class>ordermanage/observer</class>
+                        <method>addOptionToDelete</method>
+                    </escoin_ordermanage>
+                </observers>
+            </adminhtml_block_html_before>
+            <sales_order_delete_after>
+                <observers>
+                    <escoin_ordermanage>
+                      <class>ordermanage/observer</class>
+                      <method>deleteOrderFromGrid</method>
+                    </escoin_ordermanage>
+                </observers>
+            </sales_order_delete_after>
+        </events>
+	</adminhtml>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<Escoin_Ordermanage before="Mage_Adminhtml">Escoin_Ordermanage_Adminhtml</Escoin_Ordermanage>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<default>
+		<ordermanage>
+		</ordermanage>
+	</default>
+</config>

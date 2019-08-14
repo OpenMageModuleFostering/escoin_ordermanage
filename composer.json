@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/escoin_ordermanage",
+    "type": "magento-module",
+    "license": "MIT-License",
+    "homepage": "",
+    "description": "Escoin Ordermanage module to add delete functionality to magento",
+    "authors": [
+    {
+        "name": "Tarun Mukherjee",
+        "email": "tmukherjee13@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
