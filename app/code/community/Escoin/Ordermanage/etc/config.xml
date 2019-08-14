@@ -19,7 +19,7 @@
 <config>
 	<modules>
 		<Escoin_Ordermanage>
-			<version>0.3.0</version>
+			<version>0.4.0</version>
 		</Escoin_Ordermanage>
 	</modules>
 	<global>
@@ -51,6 +51,41 @@
 				<to><![CDATA[/ordermanage/order/cancel/$1]]></to>
             </escoin_ordermanage>
         </rewrite>
+
+        <resources>
+        <ordermanage_setup>
+            <setup>
+                <module>Escoin_Ordermanage</module>
+                <class>Escoin_Ordermanage_Model_Resource_Setup</class>
+            </setup>
+        </ordermanage_setup>
+    </resources>
+
+<sales>
+	<order>
+		
+                <statuses>
+                    <customer_cancelled translate="label">
+                    	<label>Cancelled by Customer</label>
+                    	 <visible_on_front>1</visible_on_front>
+                </customer_cancelled>
+                </statuses>
+
+
+ <states>
+ <customer_cancelled translate="label">
+ 	<label>Cancelled by Customer</label>
+ <statuses>
+ <customer_cancelled default="1"/>
+ </statuses>
+  <visible_on_front>1</visible_on_front>
+ </customer_cancelled>
+
+ </states>
+
+ </order>
+ </sales> 
+        
 	</global>
 	<frontend>
 		<routers>
