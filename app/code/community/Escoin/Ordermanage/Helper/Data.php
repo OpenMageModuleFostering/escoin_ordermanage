@@ -22,4 +22,14 @@
  * Ç(Š
  */
 class Escoin_Ordermanage_Helper_Data extends Mage_Core_Helper_Abstract{
+
+	public function getCancel()
+	{
+		return Mage::getStoreConfig('ordermanage/frontend/orderstate');
+	}
+
+	public function isEnabled()
+	{
+		return Mage::getStoreConfig('ordermanage/frontend/enabled');
+	}
 }

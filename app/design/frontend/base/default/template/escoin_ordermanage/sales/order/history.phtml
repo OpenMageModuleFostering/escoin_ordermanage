@@ -17,6 +17,7 @@
  */
 
 ?>
+<?php $_helper = Mage::helper('ordermanage'); ?>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 <?php $_orders = $this->getOrders(); ?>
 <div class="page-head">
@@ -50,7 +51,7 @@
                         <span class="separator">|</span> <a href="<?php echo $this->getReorderUrl($_order) ?>" style="font-weight: bold; color: #403A3A;"><?php echo $this->__('Reorder') ?></a>
                     <?php endif ?>
                     <?php /* CHANGES STARTS */ ?>
-                    <?php if ($_order->canCancel()) { ?>
+                    <?php if (($_order->canCancel() || $_helper->getCancel()) && $_helper->isEnabled()) { ?>
                         <span class="separator">|</span> 
                         <a href="<?php echo $this->getUrl('sales/order/cancel', array('order_id' => $_order->getId())); ?>" class="order-cancel">
                             <?php echo $this->__('Cancel') ?>
