@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>escoin_ordermanage</name>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/mit-license.php">MIT License</license>
     <channel>community</channel>
     <extends/>
     <summary>Escoin Ordermanage module to add delete functionality to magento</summary>
     <description>Escoin Ordermanage module adds the functionality to delete orders in the admin end and the option for users to cancel their orders in the frontend.</description>
-    <notes>Escoin_Ordermanage ver 0.1.1 stable. added missing files.</notes>
+    <notes>Escoin_Ordermanage ver 0.1.1 stable. Fixed cancel order links for frontend.</notes>
     <authors><author><name>Tarun Mukherjee</name><user>tmukherjee13</user><email>tmukherjee13@gmail.com</email></author></authors>
-    <date>2014-07-10</date>
-    <time>17:29:54</time>
-    <contents><target name="magecommunity"><dir name="Escoin"><dir name="Ordermanage"><dir name="Block"><dir name="Order"><file name="History.php" hash="1e58105669c01604fd57cdca07f0b28c"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Ordermanage"><file name="OrderController.php" hash="faf0708302e8b3529ecc29ab4f3ef525"/></dir></dir><file name="OrderController.php" hash="0084f51a0f19ab279b3f203e58d42e1b"/></dir><dir name="etc"><file name="config.xml" hash="259c642331b79a8c52b0cb28d81124fb"/></dir><dir name="Helper"><file name="Data.php" hash="52dc40aceed28ea0fad8ee885b02385a"/></dir><dir name="Model"><file name="Observer.php" hash="f6f75d978b2faa558840eee1000233ab"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Escoin_Ordermanage.xml" hash="3cdaee218f290b4dff9386cb8fa78c4f"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="escoin_ordermanage.xml" hash="510f38130495a132f6bb211cd289bd56"/></dir><dir name="template"><dir name="escoin_ordermanage"><dir name="sales"><dir name="order"><file name="history.phtml" hash="7e29c2b9aab96558c7714c852b270455"/><file name="recent.phtml" hash="611199672cf7704f81cc77653a899da3"/></dir></dir></dir></dir></dir></dir></dir></target><target name="magelocale"><dir><dir name="en_US"><file name="Escoin_Ordermanage.csv" hash="8c671e41dab92339bfb2e5917bbe3b7a"/></dir></dir></target></contents>
+    <date>2014-07-11</date>
+    <time>15:47:06</time>
+    <contents><target name="magecommunity"><dir name="Escoin"><dir name="Ordermanage"><dir name="Block"><dir name="Order"><file name="History.php" hash="1e58105669c01604fd57cdca07f0b28c"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Ordermanage"><file name="OrderController.php" hash="faf0708302e8b3529ecc29ab4f3ef525"/></dir></dir><file name="OrderController.php" hash="0084f51a0f19ab279b3f203e58d42e1b"/></dir><dir name="etc"><file name="config.xml" hash="0ef0bf38ce80c8f885b084d8c183e713"/></dir><dir name="Helper"><file name="Data.php" hash="52dc40aceed28ea0fad8ee885b02385a"/></dir><dir name="Model"><file name="Observer.php" hash="f6f75d978b2faa558840eee1000233ab"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Escoin_Ordermanage.xml" hash="3cdaee218f290b4dff9386cb8fa78c4f"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="escoin_ordermanage.xml" hash="510f38130495a132f6bb211cd289bd56"/></dir><dir name="template"><dir name="escoin_ordermanage"><dir name="sales"><dir name="order"><file name="history.phtml" hash="7e29c2b9aab96558c7714c852b270455"/><file name="recent.phtml" hash="611199672cf7704f81cc77653a899da3"/></dir></dir></dir></dir></dir></dir></dir></target><target name="magelocale"><dir><dir name="en_US"><file name="Escoin_Ordermanage.csv" hash="8c671e41dab92339bfb2e5917bbe3b7a"/></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

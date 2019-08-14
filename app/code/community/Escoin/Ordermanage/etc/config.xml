@@ -19,7 +19,7 @@
 <config>
 	<modules>
 		<Escoin_Ordermanage>
-			<version>0.1.0</version>
+			<version>0.2.0</version>
 		</Escoin_Ordermanage>
 	</modules>
 	<global>
